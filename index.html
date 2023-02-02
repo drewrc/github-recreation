@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-
-
+    <link rel="stylesheet" href="colors.css" />
+  </head>
+  <body>
     <div class="container">
-        <div class="row side-profile">
-            <div>
-                
-            </div>
-        </div>
+      <div class="row side-profile">
+        <div></div>
+      </div>
     </div>
 
-
     <script id="profile-card" type="text/x-handlebars-template">
-        
-        
-        <div class="card col-12 col-md-3" style="width: 18rem;">
-        <img src={{avatar_url}} class="card-img-top" alt="..." />
+      <header>Head goes here</header>
+
+
+      <div class="card col-12 col-md-3 left-side" style="width: 18rem;">
+        <img src="{{avatar_url}}" class="card-img-top" alt="..." />
         <div class="card-body">
-            <h5 class="card-title">{{camera.full_name}}</h5>
-            <time>{{earth_date}}</time>
-            </div>
+          <h5 class="card-title">{{login}} </h5>
+          <button>Edit Profile</button>
+          <p>
+          {{followers}} followers
+          {{following}} following
+        </p>
+        <p class="join-border">
+         Joined {{created_at}}
+        </p>
+        <p>
+          <h5>Organizations</h5>
+          <p>
+            {{organizations_url}}
+          </p>
+        </p>
         </div>
-      
+      </div>
+
+   <!--<script id="repos-list" type="text/x-handlebars-template"> -->
+    
+    <section class="col-12 col-md-8 repo-container">
+        links go here
+        <div class="search-repos">search repos here</div>
+        <div class="repos-list">
+          <p>placeholder</p>
+          <p class="repo-one">{{list[1].name}}</p>
+          <p>Repo three</p>
+        </div>
+      </section>
+ 
     </script>
 
-
+   
 
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
     <script src="main.js" type="module"></script>
-
-</body>
+  </body>
 </html>
