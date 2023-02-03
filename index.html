@@ -15,54 +15,64 @@
     <link rel="stylesheet" href="colors.css" />
   </head>
   <body>
-    <div class="container">
-      <div class="row side-profile">
-        <div></div>
+    <div class="row container">
+      <div class="col-md-3 side-profile left-side">
+        <p class="org-icons"></p>
       </div>
-    </div>
+      <div class="col main">
+        <section class="main-top">
+          links go here
+          <div class="search-repos">search repos here</div>
+        </section>
+        <div class="col-md-8 repo-container"></div>
+          </div>
+       </div>
+
+
+    <script id="repos-list" type="text/x-handlebars-template">
+      {{#each repos}}
+          <div class="repos-list">
+            <div class="repos-display">
+              <h3>{{name}}</h3>
+              <button> class="visibility">{{visibility}}</button>
+            
+            </div>
+            <p class="language"> 
+              <span class="repo-language-color" style="background-color: #f1e05a">o</span>
+            {{language}}
+            {{updated_at}}
+          </p>  
+            </div>
+      {{/each}}
+    </script>
+
+    <script id="orgs-list" type="text/x-handlebars-template">
+    {{#each organizations}}
+        <h5>Organizations</h5>
+        <p class="org-icons">
+          <a href="{{url}}"><img id="orgs" src="{{avatar_url}}"></a>
+        </p>
+    {{/each}}
+    </script>
 
     <script id="profile-card" type="text/x-handlebars-template">
       <header>Head goes here</header>
-
-
-      <div class="card col-12 col-md-3 left-side" style="width: 18rem;">
         <img src="{{avatar_url}}" class="card-img-top" alt="..." />
-        <div class="card-body">
           <h5 class="card-title">{{login}} </h5>
           <button>Edit Profile</button>
           <p>
-          {{followers}} followers
-          {{following}} following
-        </p>
-        <p class="join-border">
-         Joined {{created_at}}
-        </p>
-        <p>
-          <h5>Organizations</h5>
-          <p>
-            {{organizations_url}}
+            {{followers}}
+            followers
+            {{following}}
+            following
           </p>
-        </p>
-        </div>
-      </div>
-
-   <!--<script id="repos-list" type="text/x-handlebars-template"> -->
-    
-    <section class="col-12 col-md-8 repo-container">
-        links go here
-        <div class="search-repos">search repos here</div>
-        <div class="repos-list">
-          <p>placeholder</p>
-          <p class="repo-one">{{list[1].name}}</p>
-          <p>Repo three</p>
-        </div>
-      </section>
- 
-    </script>
-
-   
-
+          <p class="join-border">
+            Joined
+            {{created_at}}
+          </p>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js" integrity="sha512-CryKbMe7sjSCDPl18jtJI5DR5jtkUWxPXWaLCst6QjH8wxDexfRJic2WRmRXmstr2Y8SxDDWuBO6CQC6IE4KTA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
     <script src="main.js" type="module"></script>
   </body>
 </html>
