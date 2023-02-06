@@ -14,17 +14,18 @@
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="colors.css" />
   </head>
+
   <body>
     <div class="row container">
       <div class="col-md-3 side-profile left-side">
         <p class="org-icons"></p>
       </div>
-      <div class="col main">
+      <div class="col-md-3 main">
         <section class="main-top">
           links go here
           <div class="search-repos">search repos here</div>
         </section>
-        <div class="col-md-8 repo-container"></div>
+        <div class="col-md-6 repo-container"></div>
           </div>
        </div>
 
@@ -33,12 +34,12 @@
       {{#each repos}}
           <div class="repos-list">
             <div class="repos-display">
-              <h3>{{name}}</h3>
-              <button> class="visibility">{{visibility}}</button>
+             <a class="repo-link" href="{{html_url}}"> <h3>{{name}}</h3> </a>
+              <div class="visibility"> {{visibility}}</div>
             
             </div>
             <p class="language"> 
-              <span class="repo-language-color" style="background-color: #f1e05a">o</span>
+              <span class="{{language}}">⬤</span>
             {{language}}
             {{updated_at}}
           </p>  
@@ -59,7 +60,7 @@
       <header>Head goes here</header>
         <img src="{{avatar_url}}" class="card-img-top" alt="..." />
           <h5 class="card-title">{{login}} </h5>
-          <button>Edit Profile</button>
+          <button class="edit-profile">Edit Profile</button>
           <p>
             {{followers}}
             followers

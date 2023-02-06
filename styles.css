@@ -6,6 +6,11 @@ body {
 h3 {
     color:rgb(79, 152, 255);
     font-size: 22px;
+    text-decoration: none;
+}
+
+h3:hover {
+    color:rgb(99, 163, 253);
 }
 
 .language {
@@ -21,16 +26,27 @@ font-size: 10px;
     background-color: rgb(32, 32, 32);
     color: lightgray;
     border: 1px solid lightgray;
-    border-radius: 10px;
+    border-radius: 7px;
     text-transform: capitalize;
+    text-align: center;
     font-size: 10px;
+    height: 20px;
+    width: 35px;
+    padding-top: 1px;
+    margin-top: 6px;
+    margin-left: 7px;
 }
 
 .repos-display {
     display: inline-flex;
-
 }
 
+.repo-link {
+    color:rgb(79, 152, 255);
+}
+.repo-link:hover {
+    color:rgb(136, 186, 255);
+}
 
 .repo-language-color {
     border: 1px solid #fff5ab;
@@ -64,7 +80,6 @@ font-size: 10px;
 }
 header {
     width: 100%;
-  
     background-color: rgb(46, 46, 46);
 }
 .repo-container {
@@ -78,4 +93,18 @@ header {
 }
 .repos-list {
     border-bottom: 1px solid grey;
+}
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.card-title {
+    color: rgb(159, 159, 159);
+    padding: 20px;
+    font-weight: 300;
+    font-size: 23px;
+}
+.edit-profile {
+    width: 100%;
 }
